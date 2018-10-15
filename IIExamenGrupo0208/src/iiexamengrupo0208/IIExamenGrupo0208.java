@@ -81,16 +81,21 @@ public class IIExamenGrupo0208 {
          */
         System.out.println("\nPRUEBA CASO 4 COMPOSITE");
         
-        iSimbolo operando1 = new Operando("2");
-        iSimbolo operando2 = new Operando("3");
-        iSimbolo operacion = new Operador("+");
-        operacion.agregarLadoIzq(operando1);
+         iSimbolo operando0 = new Operando("6"); // Hoja
+        iSimbolo operando1 = new Operando("2"); // Hoja
+        iSimbolo operando2 = new Operando("3"); // Hoja
+        iSimbolo operacion0 = new Operador("*"); // Composite
+        iSimbolo operacion = new Operador("+"); // Composite
+        
+         operacion.agregarLadoIzq(operando1);
         operacion.agregarLadoDer(operando2);
+        operacion0.agregarLadoIzq(operacion);
+        operacion0.agregarLadoDer(operando0);
         
         System.out.println("Primer ejemplo caso 4: ");
-        System.out.println("Expresion: "+operacion.obtenerExpresion());
-        System.out.println("Valido: "+operacion.validarExpresion());
-        System.out.println("Resultado: "+operacion.obtenerResultadoExpresion());
+        System.out.println("Expresion: "+operacion0.obtenerExpresion());
+        System.out.println("Valido: "+operacion0.validarExpresion());
+        System.out.println("Resultado: "+operacion0.obtenerResultadoExpresion());
         System.out.println("");
         
         iSimbolo operando3 = new Operando("5");
