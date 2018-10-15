@@ -35,6 +35,7 @@ public class IIExamenGrupo0208 {
          * Prueba Caso 1 Factory
          * 
          */
+        System.out.println("\nPRUEBA CASO 1 Factory");
         
         ArmaFactory armaFactory = new ArmaFactory();
                
