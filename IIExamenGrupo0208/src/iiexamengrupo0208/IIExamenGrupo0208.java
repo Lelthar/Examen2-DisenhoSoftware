@@ -8,6 +8,12 @@ package iiexamengrupo0208;
 import Caso1_Factory.Arma;
 import Caso1_Factory.ArmaFactory;
 import Caso1_Factory.Raza;
+import Caso3_Bridge.JVM;
+import Caso3_Bridge.Linux;
+import Caso3_Bridge.PreemptiveThreadScheduler;
+import Caso3_Bridge.SistemaOperativo;
+import Caso3_Bridge.TimeSlicedThreadScheduler;
+import Caso3_Bridge.Windows;
 import Caso4_Composite.Operador;
 import Caso4_Composite.Operando;
 import Caso4_Composite.iSimbolo;
@@ -40,13 +46,39 @@ public class IIExamenGrupo0208 {
         arma = armaFactory.getArma(Raza.Maiars);
         System.out.println("Segundo ejemplo caso 1:");
         System.out.println(arma.toString());
-        System.out.println("");
+        
+        /**
+         *
+         * Prueba Caso 3 Bridge
+         * 
+         */
+        
+        System.out.println("\nPRUEBA CASO 3 BRIDGE");
+        
+        SistemaOperativo windowsPTS = new Windows(new PreemptiveThreadScheduler());
+        windowsPTS.atenderSolicitud();
+        
+        SistemaOperativo linuxPTS = new Linux(new PreemptiveThreadScheduler());
+        linuxPTS.atenderSolicitud();
+        
+        SistemaOperativo JVM_PTS = new JVM(new PreemptiveThreadScheduler());
+        JVM_PTS.atenderSolicitud();
+        
+        SistemaOperativo windowsSTS = new Windows(new TimeSlicedThreadScheduler());
+        windowsSTS.atenderSolicitud();
+        
+        SistemaOperativo linuxSTS = new Linux(new TimeSlicedThreadScheduler());
+        linuxSTS.atenderSolicitud();
+        
+        SistemaOperativo jJVM_STS = new JVM(new TimeSlicedThreadScheduler());
+        jJVM_STS.atenderSolicitud();
         
         /**
          *
          * Prueba Caso 4 Composite
          * 
          */
+        System.out.println("\nPRUEBA CASO 4 COMPOSITE");
         
         iSimbolo operando1 = new Operando("2");
         iSimbolo operando2 = new Operando("3");
