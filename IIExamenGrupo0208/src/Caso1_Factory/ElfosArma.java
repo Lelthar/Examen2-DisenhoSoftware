@@ -21,6 +21,6 @@ public class ElfosArma extends Arma{
     
     @Override
     public String toString() {
-        return "Elfos arma " + super.toString() + "\n" ;
+        return "Elfos arma " + super.toString();
     }
 }

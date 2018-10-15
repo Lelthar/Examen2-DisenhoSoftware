@@ -21,6 +21,6 @@ public class EnanosArma extends Arma{
     
     @Override
     public String toString() {
-        return "Enanos arma " + super.toString() + "\n" ;
+        return "Enanos arma " + super.toString() ;
     }
 }

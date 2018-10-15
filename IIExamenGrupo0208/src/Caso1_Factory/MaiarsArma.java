@@ -21,7 +21,7 @@ public class MaiarsArma extends Arma{
     
     @Override
     public String toString() {
-        return "Maiars arma " + super.toString() + "\n" ;
+        return "Maiars arma " + super.toString();
     }
     
 }

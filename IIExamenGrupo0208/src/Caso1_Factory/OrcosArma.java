@@ -21,7 +21,7 @@ public class OrcosArma extends Arma{
     
     @Override
     public String toString() {
-        return "Orcos arma " + super.toString() + "\n" ;
+        return "Orcos arma " + super.toString();
     }
     
 }
